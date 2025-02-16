@@ -5,3 +5,6 @@ print(a)
 
 b = pd.MultiIndex.from_tuples([('a',1),('a',2),('b',1),('b',2)],names = ['x','y'])
 print(b)
+
+c = pd.MultiIndex.from_product([['a','b'],[1,2]],names = ['x','y'])
+print(c)
