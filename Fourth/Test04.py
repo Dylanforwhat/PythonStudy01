@@ -11,3 +11,6 @@ sc = SparkContext(conf = conf)
 # rdd.reduceByKey(func)
 #  func:(K,V) → V  接受2个传入参数，类型一致，返回一个返回值
 
+rdd = sc.parallelize([('a',1),('a',1),('b',1),('b',1),('b',1)])
+result = rdd.reduceByKey(lambda a,b:a-b)
+print(result.collect())
