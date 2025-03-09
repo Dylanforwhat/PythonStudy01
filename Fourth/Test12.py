@@ -10,8 +10,8 @@ conf = SparkConf().setMaster("local[*]").setAppName("test_spark")
 conf.set("spark.default.parallelism","1") # 设置全局并行数默认为1
 sc = SparkContext(conf = conf)
 
-file_rdd = sc.textFile("d:/xxx.txt")
-result1 = file_rdd.map(lambda x:x.split("\t")).\  # 链式调用太长的是否可以用斜杠分行
+file_rdd = sc.textFile("d:/xxx.txt") # 链式调用太长的是否可以用斜杠分行
+result1 = file_rdd.map(lambda x:x.split("\t")).\
     map(lambda x: x[0][:2]).\
     map(lambda x:(x,1)).\
     reduceByKey(lambda a,b:a+b).\
