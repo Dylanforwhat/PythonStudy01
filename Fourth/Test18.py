@@ -17,5 +17,5 @@ c = 'excel 12314word\n 2345_ppt123dlr'
 r5 = re.findall('\d',c)
 print(r5)
 
-r6 = re.findall('\D',c)
-print(r6)
+r7 = re.findall('\D',c)
+print(r7)
