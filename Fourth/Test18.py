@@ -19,3 +19,10 @@ print(r5)
 
 r7 = re.findall('\D',c)
 print(r7)
+
+d = 'excel 12314word\n 2345$$_ppt123dlr'
+r8 = re.findall('\w',d)
+print(r8)
+
+r9 = re.findall('\W',d)
+print(r9 )
