@@ -12,3 +12,4 @@ c = '123abc456'
 r02 = re.search('([0-9]*)([a-z]*)([0-9]*)',c)
 print(r02.group(2))
 print(r02.group(3))
+
