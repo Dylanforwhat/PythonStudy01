@@ -15,5 +15,5 @@ import re
 r = r'(^[\w-]+(\.[\w-]+)*@(qq)(\.[\w-]+)+$)'
 # +表示这个包含-的全字符合计至少出现一个字母
 # \.表示点本身
-s = 'a.v.c.c.e.@qq.com.z.a.s.f'
+s = 'a.v.c@qq.com.z.a.s.f'
 print(re.findall(r,s))
